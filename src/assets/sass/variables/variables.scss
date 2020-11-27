@@ -1,0 +1,13 @@
+$colors-map: (
+  'primary': #3f51b5,
+  'secondary': #00cc99,
+  'error': #ff6633,
+  'warrning': #ffcc33,
+  'sucess': #00cc99,
+  'text-light': #5e5f61
+);
+
+
+@function project-color($key: 'primary') {
+  @return map-get($colors-map, $key);
+}
