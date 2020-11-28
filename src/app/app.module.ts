@@ -9,6 +9,8 @@ import {LoginModule} from './components/login/login.module';
 import {MainModule} from './components/main/main.module';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     LoginModule,
     MainModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
