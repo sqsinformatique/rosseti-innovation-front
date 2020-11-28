@@ -2,9 +2,7 @@
   <div class="login__body">
     <mat-toolbar class="row row_between" color="primary">
       <span *ngIf="ready">Логин</span>
-      <mat-progress-bar *ngIf="!ready"
-                        mode="indeterminate">
-      </mat-progress-bar>
+      <mat-progress-bar *ngIf="!ready" mode="indeterminate"></mat-progress-bar>
     </mat-toolbar>
     <form class="login__form">
       <mat-form-field class="login__field">

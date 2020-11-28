@@ -10,13 +10,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {HeaderComponent} from '../header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {ForumComponent} from './forum/forum.component';
 import {NotificationsComponent} from './notifications/notifications.component';
 import {DataBaseComponent} from './data-base/data-base.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-import { TopicComponent } from './forum/topic/topic.component';
 import {MatListModule} from '@angular/material/list';
+import { ForumMainComponent } from './forum-main/forum-main.component';
+import {ForumComponent} from './forum-main/forum/forum.component';
+import {TopicComponent} from './forum-main/forum/topic/topic.component';
+import {DetailComponent} from './forum-main/forum/topic/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import {MatListModule} from '@angular/material/list';
     NotificationsComponent,
     DataBaseComponent,
     TopicComponent,
+    DetailComponent,
+    ForumMainComponent,
   ],
     imports: [
         CommonModule,

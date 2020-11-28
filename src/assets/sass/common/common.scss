@@ -44,3 +44,13 @@
     top: 0;
   }
 }
+
+.overflow {
+  &_auto-x {
+    overflow-x: auto;
+  }
+}
+
+.link {
+  display: block;
+}

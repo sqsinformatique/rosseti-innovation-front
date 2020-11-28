@@ -1,11 +1,12 @@
 .icon {
-  padding: 5px;
-  background-position: 50%;
-  background-size: contain;
-
   &_big {
     width: 64px;
     height: 64px;
+  }
+
+  &_button {
+    border: none;
+    background-color: transparent;
   }
 
   &_small {
