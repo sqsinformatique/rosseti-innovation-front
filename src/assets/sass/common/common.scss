@@ -23,6 +23,10 @@
     color: project-color('secondary');
   }
 
+  &_nowrap {
+    white-space: nowrap;
+  }
+
   &_overflow {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -42,12 +46,6 @@
   &_sticky {
     position: sticky;
     top: 0;
-  }
-}
-
-.overflow {
-  &_auto-x {
-    overflow-x: auto;
   }
 }
 
