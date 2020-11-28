@@ -1,0 +1,35 @@
+<div class="page__wrapper">
+  <div class="forum row row_nowrap row_start row_offset-big">
+    <div class="col col_8 col_xs-12 col_offset-4">
+      <div class="row row_nowrap row_between row_start">
+        <div class="col col_offset-2">
+          <h1 class="text text_center text_primary">Форум</h1>
+          всего {{topicList.length}} тем
+        </div>
+        <div class="col row row_right">
+          <mat-form-field appearance="fill">
+            <mat-label>Количество записей</mat-label>
+            <mat-select value="option1">
+              <mat-option value="option1">Последние 5 активных</mat-option>
+              <mat-option value="option2">Последние 15 активных</mat-option>
+              <mat-option value="option3">Последние 25 активных</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <ng-container *ngFor="let topic of topicList">
+        <app-topic [topic]='topic'></app-topic>
+      </ng-container>
+    </div>
+    <div class="col col_4 col_xs-12 col_offset-4">
+      <div class="overflow overflow_auto-x">
+        <mat-selection-list class="custom-selection-list custom-selection-list_xs-row" [multiple]="false">
+          <mat-list-option>Мои предложения</mat-list-option>
+          <mat-list-option>Создать предложение</mat-list-option>
+          <mat-list-option>Все предложения</mat-list-option>
+        </mat-selection-list>
+      </div>
+    </div>
+  </div>
+</div>
+
