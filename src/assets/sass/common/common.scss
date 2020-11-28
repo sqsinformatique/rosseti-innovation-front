@@ -52,3 +52,9 @@
 .link {
   display: block;
 }
+
+.overflow {
+  &_x-auto {
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,27 @@
+.notification {
+  &_category {
+    padding: 16px;
+  }
+}
+
+.custom-tab-group {
+  width: 100%;
+
+  .mat-tab-label {
+    padding: 0;
+    font-size: 12px;
+    width: 100%;
+    min-width: 0;
+
+    .mat-tab-label-content {
+      white-space: pre-wrap;
+    }
+  }
+
+  @media screen and (max-width: $small-screen) {
+    .mat-tab-label {
+      width: auto;
+      padding: 0 10px;
+    }
+  }
+}
