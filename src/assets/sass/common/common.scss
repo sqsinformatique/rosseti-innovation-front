@@ -1,0 +1,21 @@
+.text {
+  &_left {
+    text-align: left;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_right {
+    text-align: right;
+  }
+
+  &_primary {
+   color: project-color('primary');
+  }
+
+  &_secondary {
+    color: project-color('secondary');
+  }
+}

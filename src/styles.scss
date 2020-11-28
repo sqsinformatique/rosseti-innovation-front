@@ -1,6 +1,7 @@
 @import "assets/sass/variables/variables";
 @import "assets/sass/common/grid";
 @import "assets/sass/common/icons";
+@import "assets/sass/common/common";
 
 @import "assets/sass/components/login";
 @import "assets/sass/components/main";
@@ -25,4 +26,20 @@ a:hover{
 a:visited{
   color: #5e5f61;
   text-decoration: none;
+}
+
+.app {
+  min-width: $app-min-width;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #efefef;
+}
+
+.mat-tab-labels{
+  justify-content: center;
+}
+
+.mat-tab-label {
+  width: 100%;
 }

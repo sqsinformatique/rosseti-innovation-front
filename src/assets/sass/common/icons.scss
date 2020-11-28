@@ -1,6 +1,4 @@
 .icon {
-  width: 32px;
-  height: 32px;
   padding: 5px;
   background-position: 50%;
   background-size: contain;
@@ -13,6 +11,10 @@
   &_small {
     width: 32px;
     height: 32px;
+  }
+
+  &_offset {
+    padding: 0 10px;
   }
 
   &_line {

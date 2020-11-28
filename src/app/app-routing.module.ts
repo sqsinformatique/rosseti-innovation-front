@@ -2,15 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './components/login/login.component';
 import {MainComponent} from './components/main/main.component';
-import {OrderComponent} from './components/main/order/order.component';
-import {TasksComponent} from './components/main/tasks/tasks.component';
-import {CheckListComponent} from './components/main/checklist/checklist.component';
-
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/main',
     pathMatch: 'full'
   },
   {
@@ -19,31 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'main',
-    component: MainComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'tasks',
-        pathMatch: 'full'
-      },
-      {
-        path: 'tasks',
-        component: TasksComponent
-      },
-      {
-        path: 'order',
-        component: OrderComponent
-      },
-      {
-        path: 'checklist',
-        component: CheckListComponent
-      }
-    ]
+    component: MainComponent
   },
-  {
-    path: 'order/:id',
-    component: OrderComponent
-  }
 ];
 
 @NgModule({

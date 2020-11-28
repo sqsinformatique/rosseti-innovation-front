@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   align-items: center;
+  flex-wrap: wrap;
 
   &_between {
     justify-content: space-between;
@@ -45,5 +46,15 @@
 
   &_offset-big {
     margin-top: 24px;
+  }
+}
+
+.col {
+  width: auto;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100% / 12 * $i;
   }
 }

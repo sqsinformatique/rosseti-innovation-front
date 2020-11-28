@@ -7,6 +7,8 @@ $colors-map: (
   'text-light': #5e5f61
 );
 
+$app-width: 1280px;
+$app-min-width: 320px;
 
 @function project-color($key: 'primary') {
   @return map-get($colors-map, $key);
