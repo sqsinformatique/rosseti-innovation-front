@@ -15,8 +15,7 @@ import {DataBaseComponent} from './data-base/data-base.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatListModule} from '@angular/material/list';
-import { ForumMainComponent } from './forum-main/forum-main.component';
-import {ForumComponent} from './forum-main/forum/forum.component';
+import { ForumComponent } from './forum-main/forum.component';
 import {TopicComponent} from './forum-main/forum/topic/topic.component';
 import {DetailComponent} from './forum-main/forum/topic/detail/detail.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -31,7 +30,6 @@ import { ProfileComponent } from './profile/profile.component';
     DataBaseComponent,
     TopicComponent,
     DetailComponent,
-    ForumMainComponent,
     ProfileComponent,
   ],
     imports: [

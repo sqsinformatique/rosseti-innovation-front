@@ -22,11 +22,22 @@
 }
 
 .forum {
+  padding: 16px;
+
   h1 {
     margin-bottom: 0;
   }
 
+  &__menu {
+    padding: 0 10px;
+  }
+
   @media screen and (max-width: $small-screen){
     flex-direction: column-reverse;
+
+    &__menu {
+      overflow-x: auto;
+      padding: 0;
+    }
   }
 }
