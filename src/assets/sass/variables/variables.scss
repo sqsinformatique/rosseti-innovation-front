@@ -10,6 +10,10 @@ $colors-map: (
 $app-width: 1280px;
 $app-min-width: 320px;
 
+$big-screen: 1480px;
+$medium-screen: 1024px;
+$small-screen: 680px;
+
 @function project-color($key: 'primary') {
   @return map-get($colors-map, $key);
 }

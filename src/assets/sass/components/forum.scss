@@ -1,0 +1,26 @@
+.topic {
+  &__img {
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    background-image: url('/assets/img/icons/line.png');
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: $small-screen) {
+    &__img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.forum {
+  @media screen and (max-width: $small-screen){
+    flex-direction: column-reverse;
+  }
+}

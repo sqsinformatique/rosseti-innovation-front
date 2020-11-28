@@ -51,10 +51,27 @@
 
 .col {
   width: auto;
-}
 
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    width: 100% / 12 * $i;
+  &_offset {
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        padding: 0 #{2 * $i}px;
+      }
+    }
+  }
+
+  @for $i from 1 through 12 {
+    &_#{$i} {
+      width: 100% / 12 * $i;
+    }
+  }
+
+  @media screen and (max-width: $small-screen){
+    @for $i from 1 through 12 {
+      &_xs-#{$i} {
+        width: 100% / 12 * $i;
+      }
+    }
   }
 }
+

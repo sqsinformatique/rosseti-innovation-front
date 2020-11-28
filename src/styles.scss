@@ -5,6 +5,7 @@
 
 @import "assets/sass/components/login";
 @import "assets/sass/components/main";
+@import "assets/sass/components/forum";
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import "~@angular/material/theming";
@@ -34,12 +35,4 @@ a:visited{
   display: flex;
   flex-direction: column;
   background-color: #efefef;
-}
-
-.mat-tab-labels{
-  justify-content: center;
-}
-
-.mat-tab-label {
-  width: 100%;
 }

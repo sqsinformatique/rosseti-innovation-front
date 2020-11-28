@@ -15,6 +15,8 @@ import {NotificationsComponent} from './notifications/notifications.component';
 import {DataBaseComponent} from './data-base/data-base.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { TopicComponent } from './forum/topic/topic.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -24,18 +26,20 @@ import {MatSelectModule} from '@angular/material/select';
     HeaderComponent,
     NotificationsComponent,
     DataBaseComponent,
+    TopicComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatButtonModule,
-    MatTabsModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatSelectModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatButtonModule,
+        MatTabsModule,
+        MatIconModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatListModule
+    ],
   providers: [MainService],
 })
 
