@@ -2,8 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-topic',
-  templateUrl: './topic.component.html',
-  styleUrls: ['./topic.component.scss']
+  templateUrl: './topic.component.html'
 })
 export class TopicComponent implements OnInit {
   @Input() topic;

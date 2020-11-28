@@ -1,61 +1,91 @@
 <div class="app">
-  <app-header [title]="'Россести'"></app-header>
+  <app-header [title]="'РацСеть'"></app-header>
   <div class="page">
     <div class="page__content">
-      <mat-tab-group class="custom-tab custom-tab_wide custom-tab_header-sticky">
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="row row_col row_center">
-              <mat-icon class="icon icon_offset">person_pin</mat-icon>
-              Профиль
-            </div>
-          </ng-template>
-          <app-dashboard></app-dashboard>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="row row_col row_center">
-              <mat-icon class="icon icon_offset">star</mat-icon>
-              рейтинг
-            </div>
-          </ng-template>
-          <app-dashboard></app-dashboard>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="row row_col row_center">
-              <mat-icon class="icon icon_offset">feedback</mat-icon>
-              Форум
-            </div>
-          </ng-template>
-          <app-forum></app-forum>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="row row_col row_center">
-              <mat-icon class="icon icon_offset">book</mat-icon>
-              База знаний
-            </div>
-          </ng-template>
-          <app-data-base></app-data-base>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <div class="row row_col row_center">
-              <div class="position position_relative">
-                <mat-icon class="icon icon_offset">
-                  notification_important
-                </mat-icon>
-                <div class="position position_absolute notification-count">
-                  1
-                </div>
-              </div>
-              Уведомления
-            </div>
-          </ng-template>
-          <app-notifications></app-notifications>
-        </mat-tab>
-      </mat-tab-group>
+<!--      <mat-tab-group class="custom-tab custom-tab_wide custom-tab_header-sticky">-->
+<!--        <mat-tab>-->
+<!--          <ng-template mat-tab-label>-->
+<!--            <div class="row row_col row_center">-->
+<!--              <mat-icon class="icon icon_offset">person_pin</mat-icon>-->
+<!--              Профиль-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--          <app-dashboard></app-dashboard>-->
+<!--        </mat-tab>-->
+<!--        <mat-tab>-->
+<!--          <ng-template mat-tab-label>-->
+<!--            <div class="row row_col row_center">-->
+<!--              <mat-icon class="icon icon_offset">star</mat-icon>-->
+<!--              рейтинг-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--          <app-dashboard></app-dashboard>-->
+<!--        </mat-tab>-->
+<!--        <mat-tab>-->
+<!--          <ng-template mat-tab-label>-->
+<!--            <div class="row row_col row_center">-->
+<!--              <mat-icon class="icon icon_offset">feedback</mat-icon>-->
+<!--              Форум-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--          <app-forum></app-forum>-->
+<!--        </mat-tab>-->
+<!--        <mat-tab>-->
+<!--          <ng-template mat-tab-label>-->
+<!--            <div class="row row_col row_center">-->
+<!--              <mat-icon class="icon icon_offset">book</mat-icon>-->
+<!--              База знаний-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--          <app-data-base></app-data-base>-->
+<!--        </mat-tab>-->
+<!--        <mat-tab>-->
+<!--          <ng-template mat-tab-label>-->
+<!--            <div class="row row_col row_center">-->
+<!--              <div class="position position_relative">-->
+<!--                <mat-icon class="icon icon_offset">-->
+<!--                  notification_important-->
+<!--                </mat-icon>-->
+<!--                <div class="position position_absolute notification-count">-->
+<!--                  1-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              Уведомления-->
+<!--            </div>-->
+<!--          </ng-template>-->
+<!--          <app-notifications></app-notifications>-->
+<!--        </mat-tab>-->
+<!--      </mat-tab-group>-->
+      <nav class="custom-tab custom-tab_wide custom-tab_header-sticky" mat-tab-nav-bar>
+        <a class="custom-tab__tab"
+           routerLinkActive="custom-tab__tab_active"
+           routerLink="profile"
+           mat-tab-link>
+          <div class="user user__avatar user__avatar_small"></div>
+        </a>
+        <a class="custom-tab__tab"
+           routerLinkActive="custom-tab__tab_active"
+           routerLink="notifications"
+           mat-tab-link>
+          <mat-icon class="icon icon_offset">notification_important</mat-icon>
+          Уведомления
+        </a>
+        <a class="custom-tab__tab"
+           routerLinkActive="custom-tab__tab_active"
+           routerLink="rating"
+           mat-tab-link>
+          <mat-icon class="icon icon_offset">start</mat-icon>
+          Рейтинг
+        </a>
+        <a class="custom-tab__tab"
+           routerLinkActive="custom-tab__tab_active"
+           routerLink="topic"
+           mat-tab-link>
+          <mat-icon class="icon icon_offset">feedback</mat-icon>
+          Форум
+        </a>
+      </nav>
+        <router-outlet></router-outlet>
     </div>
   </div>
 </div>

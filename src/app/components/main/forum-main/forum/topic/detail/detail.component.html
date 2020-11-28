@@ -1,1 +1,49 @@
-<p>detail works!</p>
+<div class="chat">
+  <div class="topic">
+    <div class="row row_offset-middle">
+      <div class="col col_2">
+        <div class="topic__img"></div>
+      </div>
+      <div class="col col_8">
+        <div class="topic__name link text text_bold text_overflow">
+          {{topic.name}}
+        </div>
+      </div>
+      <div class="col col_2 row row_right">
+        <div class="topic__controls">
+          {{topic.date}}
+          <button class="icon icon_button" (click)="topic.favorite = !topic.favorite">
+            <mat-icon>{{topic.favorite ? 'bookmark' : 'bookmark_border'}}</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row_center">
+    <div class="chat__dialog">
+      <div *ngFor="let message of chat"
+           class="chat__message {{'chat__message_' + message.direct}}">
+        <div class="chat__message-body">
+          <div class="chat__avatar"></div>
+          <div class="chat__text">
+            {{message.message}}
+          </div>
+        </div>
+        <div class="chat__date">
+          {{message.time}}
+        </div>
+      </div>
+      <div class="chat__message chat__message_from">
+        <div class="chat__message-body">
+          <div class="chat__avatar"></div>
+          <div class="chat__text">
+            Цифровое управление компанией
+          </div>
+        </div>
+        <div class="chat__date">
+          14ч20м 12.11.20
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

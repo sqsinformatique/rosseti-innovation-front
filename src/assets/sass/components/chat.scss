@@ -1,0 +1,45 @@
+.chat {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+
+  &__dialog {
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  &__message-body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    &_from {
+      .chat__message-body {
+        flex-direction: row-reverse;
+      }
+
+      .chat__date {
+        margin-top: 20px;
+        text-align: right;
+      }
+    }
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0 20px;
+    background-image: url('/assets/img/icons/chat-avatar.png');
+  }
+
+  .chat__date {
+    margin-top: 20px;
+  }
+}

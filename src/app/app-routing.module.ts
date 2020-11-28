@@ -5,6 +5,10 @@ import {MainComponent} from './components/main/main.component';
 import {DetailComponent} from './components/main/forum-main/forum/topic/detail/detail.component';
 import {ForumMainComponent} from './components/main/forum-main/forum-main.component';
 import {ForumComponent} from './components/main/forum-main/forum/forum.component';
+import {ProfileComponent} from './components/main/profile/profile.component';
+import {NotificationsComponent} from './components/main/notifications/notifications.component';
+import {DataBaseComponent} from './components/main/data-base/data-base.component';
+import {RatingComponent} from './components/main/rating/rating.component';
 
 const routes: Routes = [
   {
@@ -20,6 +24,22 @@ const routes: Routes = [
     path: 'main',
     component: MainComponent,
     children: [
+      {
+        path: 'rating',
+        component: RatingComponent
+      },
+      {
+        path: 'notifications',
+        component: NotificationsComponent
+      },
+      {
+        path: 'data-base',
+        component: DataBaseComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      },
       {
         path: 'topic',
         component: ForumMainComponent,

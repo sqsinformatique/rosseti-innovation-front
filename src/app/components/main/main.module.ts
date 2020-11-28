@@ -5,7 +5,7 @@ import {MainService} from './main.service';
 import {RouterModule} from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
-import {DashboardComponent} from './dashboard/dashboard.component';
+import {RatingComponent} from './rating/rating.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {HeaderComponent} from '../header/header.component';
@@ -19,11 +19,12 @@ import { ForumMainComponent } from './forum-main/forum-main.component';
 import {ForumComponent} from './forum-main/forum/forum.component';
 import {TopicComponent} from './forum-main/forum/topic/topic.component';
 import {DetailComponent} from './forum-main/forum/topic/detail/detail.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     MainComponent,
-    DashboardComponent,
+    RatingComponent,
     ForumComponent,
     HeaderComponent,
     NotificationsComponent,
@@ -31,6 +32,7 @@ import {DetailComponent} from './forum-main/forum/topic/detail/detail.component'
     TopicComponent,
     DetailComponent,
     ForumMainComponent,
+    ProfileComponent,
   ],
     imports: [
         CommonModule,
