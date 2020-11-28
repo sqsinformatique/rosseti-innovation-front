@@ -5,35 +5,43 @@
       <mat-tab-group class="custom-tab custom-tab_wide custom-tab_header-sticky">
         <mat-tab>
           <ng-template mat-tab-label>
-            <div class="row row_center">
-              Профиль
+            <div class="row row_col row_center">
               <mat-icon class="icon icon_offset">person_pin</mat-icon>
+              Профиль
             </div>
           </ng-template>
           <app-dashboard></app-dashboard>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
-            <div class="row row_center">
-              Форум
+            <div class="row row_col row_center">
+              <mat-icon class="icon icon_offset">star</mat-icon>
+              рейтинг
+            </div>
+          </ng-template>
+          <app-dashboard></app-dashboard>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="row row_col row_center">
               <mat-icon class="icon icon_offset">feedback</mat-icon>
+              Форум
             </div>
           </ng-template>
           <app-forum></app-forum>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
-            <div class="row row_center">
-              База знаний
+            <div class="row row_col row_center">
               <mat-icon class="icon icon_offset">book</mat-icon>
+              База знаний
             </div>
           </ng-template>
           <app-data-base></app-data-base>
         </mat-tab>
         <mat-tab>
           <ng-template mat-tab-label>
-            <div class="row row_center position position_relative">
-              Уведомления
+            <div class="row row_col row_center">
               <div class="position position_relative">
                 <mat-icon class="icon icon_offset">
                   notification_important
@@ -42,6 +50,7 @@
                   1
                 </div>
               </div>
+              Уведомления
             </div>
           </ng-template>
           <app-notifications></app-notifications>
