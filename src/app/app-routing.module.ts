@@ -13,7 +13,7 @@ import {LoginGuard} from './globals/login.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/main',
+    redirectTo: '/main/topic',
     pathMatch: 'full'
   },
   {
