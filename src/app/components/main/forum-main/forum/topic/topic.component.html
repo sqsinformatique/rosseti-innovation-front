@@ -1,7 +1,7 @@
 <div class="topic">
   <div class="row row_offset-middle">
     <div class="col col_2">
-      <div class="topic__img"></div>
+      <div class="topic__img" style="background-image: url({{topic.img}})"></div>
     </div>
     <div class="col col_8">
       <a [routerLink]="['/main/topic', topic.id]" class="topic__name link text text_bold text_overflow">
@@ -9,22 +9,32 @@
       </a>
       <div class="row">
         <div class="col col_10">
-          <div class="row row_nowrap text text_overflow">
-            <div class="topic__hashtag">
-              #управление
-            </div>
-            <div class="topic__hashtag">
-              #управление
-            </div>
-            <div class="topic__hashtag">
-              #управление
+          <div class="row row_nowrap">
+            <div class="topic__hashtag text text_overflow">
+              <ng-container *ngFor="let hashTag of topic.hashTags">
+                #{{hashTag}}
+              </ng-container>
             </div>
           </div>
         </div>
         <div class="col col_2">
-          <div class="text text_right">
+          <div class="text text_right topic__date">
             {{topic.date}}
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row col">
+          <div>
+            {{topic.like}}
+          </div>
+          <mat-icon class="topic__counter">comment</mat-icon>
+        </div>
+        <div class="row col">
+          <div class="topic__counter">
+            {{topic.comment}}
+          </div>
+          <mat-icon>thumb_up</mat-icon>
         </div>
       </div>
     </div>
