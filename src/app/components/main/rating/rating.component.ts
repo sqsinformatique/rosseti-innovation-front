@@ -11,15 +11,15 @@ export class RatingComponent implements OnInit {
       position: 'Инженер'
     },
     {
-      name: 'Сидоров Александр',
+      name: 'Сергей Ванг',
       position: 'Инженер'
     },
     {
-      name: 'Сидоров Александр',
+      name: 'Кармазов Степан',
       position: 'Инженер'
     },
     {
-      name: 'Сидоров Александр',
+      name: 'Игорь Александрович',
       position: 'Инженер'
     },
     {

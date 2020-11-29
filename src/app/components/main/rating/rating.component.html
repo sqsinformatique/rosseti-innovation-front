@@ -1,9 +1,9 @@
 <div class="rating">
-  <div *ngFor="let user of userList; let i = index" class="row row_offset-big">
-    <div class="user__avatar user__avatar_small"></div>
-    <div class="rating-name">
+  <div *ngFor="let user of userList; let i = index" class="rating__user row row_offset-big">
+    <div class="user__avatar"></div>
+    <div class="rating__user-name">
       {{i + 1}}.{{ user.name}}
-      <div>
+      <div class="rating__user-position">
         {{user.position}}
       </div>
     </div>

@@ -18,7 +18,31 @@
     font-size: 20px;
   }
 
+  &__bio {
+    margin-top: 10px;
+  }
+
   &__information {
     margin-left: 16px;
+  }
+}
+
+.rating {
+  padding: 16px;
+
+  &__user {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &__user-name {
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  &__user-position {
+    margin-top: 10px;
+    color: gray;
+    font-size: 16px;
   }
 }

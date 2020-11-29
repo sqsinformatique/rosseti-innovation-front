@@ -2,6 +2,12 @@
   &_category {
     padding: 16px;
   }
+
+  &__empty {
+    text-align: center;
+    font-size: 18px;
+    color: lightgray;
+  }
 }
 
 .custom-tab-group {
