@@ -18,6 +18,10 @@
     }
   }
 
+  .tab-content {
+    padding: 16px;
+  }
+
   @media screen and (max-width: $small-screen) {
     .mat-tab-label {
       width: auto;

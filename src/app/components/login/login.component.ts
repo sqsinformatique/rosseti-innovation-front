@@ -20,7 +20,11 @@ export class LoginComponent {
     private loginService: LoginService,
     private snackBar: MatSnackBar,
     private router: Router
-  ) { }
+  ) {
+    if (loginService.checkLogin) {
+      this.router.navigate(['main'] );
+    }
+  }
 
   openSnackBar(message: string, action: string, duration = 2000) {
     this.snackBar.open(message, action, {
@@ -36,7 +40,7 @@ export class LoginComponent {
         this.router.navigate(['main'] );
       },
       () => {
-        this.openSnackBar('Что то пошло не так', 'X');
+        this.openSnackBar('Пользователь не найден!', 'X');
         this.ready = true;
       },
       () => {

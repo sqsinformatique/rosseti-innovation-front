@@ -24,24 +24,13 @@
       <div *ngFor="let message of chat"
            class="chat__message {{'chat__message_' + message.direct}}">
         <div class="chat__message-body">
-          <div class="chat__avatar"></div>
+          <div class="chat__avatar" style="background-image: url({{message.avatar}})"></div>
           <div class="chat__text">
             {{message.message}}
+            <div class="chat__date">
+              {{message.time}}
+            </div>
           </div>
-        </div>
-        <div class="chat__date">
-          {{message.time}}
-        </div>
-      </div>
-      <div class="chat__message chat__message_from">
-        <div class="chat__message-body">
-          <div class="chat__avatar"></div>
-          <div class="chat__text">
-            Цифровое управление компанией
-          </div>
-        </div>
-        <div class="chat__date">
-          14ч20м 12.11.20
         </div>
       </div>
     </div>

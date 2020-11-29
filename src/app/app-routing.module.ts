@@ -8,6 +8,7 @@ import {ProfileComponent} from './components/main/profile/profile.component';
 import {NotificationsComponent} from './components/main/notifications/notifications.component';
 import {DataBaseComponent} from './components/main/data-base/data-base.component';
 import {RatingComponent} from './components/main/rating/rating.component';
+import {LoginGuard} from './globals/login.guard';
 
 const routes: Routes = [
   {
@@ -22,7 +23,13 @@ const routes: Routes = [
   {
     path: 'main',
     component: MainComponent,
+    canActivate: [LoginGuard],
     children: [
+      {
+        path: '',
+        redirectTo: '/main/topic',
+        pathMatch: 'full'
+      },
       {
         path: 'rating',
         component: RatingComponent
@@ -42,12 +49,10 @@ const routes: Routes = [
       {
         path: 'topic',
         component: ForumComponent,
-        children: [
-          {
-            path: ':id',
-            component: DetailComponent
-          }
-        ]
+      },
+      {
+        path: 'topic/:id',
+        component: DetailComponent
       }
     ]
   },

@@ -2,15 +2,17 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {BACKEND} from '../../globals/config';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class LoginService {
-  constructor(private http: HttpClient){}
 
-  private token = null;
+  private token = localStorage.auth || null;
+
+  constructor(private http: HttpClient, private router: Router){}
 
   getHeader(): HttpHeaders {
     return new HttpHeaders()
@@ -31,9 +33,14 @@ export class LoginService {
     this.token = token;
   }
 
+  checkLogin() {
+    return !!this.token;
+  }
+
   logout() {
     this.token = null;
     localStorage.removeItem('auth');
+    this.router.navigate(['/login']);
   }
 
   getUserByID(token): Observable<any> {

@@ -26,8 +26,10 @@
       }
 
       .chat__date {
-        margin-top: 20px;
         text-align: right;
+      }
+      .chat__text {
+        border-radius: 10px 10px 0 10px;
       }
     }
   }
@@ -37,9 +39,24 @@
     height: 60px;
     margin: 0 20px;
     background-image: url('/assets/img/icons/chat-avatar.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
-  .chat__date {
+  &__text {
+    max-width: 70%;
+    height: 100%;
+    padding: 16px;
+    background-color: #f3f3f3;
+    border-radius: 10px 10px 10px 0;
+    box-shadow: 2px 2px 5px #e0e0e0;
+  }
+
+  &__date {
+    font-size: 12px;
+    padding: 0 16px;
+    color: grey;
     margin-top: 20px;
   }
 }

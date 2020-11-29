@@ -1,1 +1,11 @@
-<p>dashboard works!</p>
+<div class="rating">
+  <div *ngFor="let user of userList; let i = index" class="row row_offset-big">
+    <div class="user__avatar user__avatar_small"></div>
+    <div class="rating-name">
+      {{i + 1}}.{{ user.name}}
+      <div>
+        {{user.position}}
+      </div>
+    </div>
+  </div>
+</div>
